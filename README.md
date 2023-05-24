@@ -10,7 +10,7 @@ dispatched and use the data they provide to perform actions in your application.
 
 ## Webhook types supported:
 
-- [ ] [Push Events](https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#push-events)
+- [x] [Push Events](https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#push-events)
 - [ ] [Tag Events](https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#tag-events)
 - [ ] [Tag Events](https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#tag-events)
 - [x] [Issue Events](https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#issue-events)

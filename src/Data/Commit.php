@@ -19,6 +19,9 @@ class Commit extends Data
         public Carbon $timestamp,
         public string $url,
         public Author $author,
+        public ?array $added,
+        public ?array $modified,
+        public ?array $removed,
     ) {
     }
 }
