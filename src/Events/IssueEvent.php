@@ -4,17 +4,13 @@ declare(strict_types=1);
 
 namespace Oneduo\LaravelGitlabWebhookClient\Events;
 
-use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Foundation\Events\Dispatchable;
-use Illuminate\Queue\SerializesModels;
 use Oneduo\LaravelGitlabWebhookClient\Contracts\WebhookEventContract;
 use Oneduo\LaravelGitlabWebhookClient\Data\Issue;
 
 class IssueEvent implements WebhookEventContract
 {
     use Dispatchable;
-    use InteractsWithSockets;
-    use SerializesModels;
 
     public function __construct(
         public readonly string $uuid,
