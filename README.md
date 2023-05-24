@@ -49,12 +49,21 @@ return [
 
 ## Usage
 
+### Setting up Gitlab
+
+To get started, you must first set up a webhook in your Gitlab project.  
+You may follow the official documentation provided
+here https://docs.gitlab.com/ee/user/project/integrations/webhooks.html.
+
+### Setting up the webhook url
+
 By default, when the `route_enabled` config is set to true, the package automatically registers a route to handle all
 incoming webhook requests.  
 It is registered as `POST /gitlab-webhook` and you may inspect your routes using the `php artisan route:list` command.
 
->**Note** If you wish to implement your own route, please take a look at the `WebhookController` to implement a similar logic to
-dispatch events.
+> **Note** If you wish to implement your own route, please take a look at the `WebhookController` to implement a similar
+> logic to
+> dispatch events.
 
 When Gitlab sends a webhook request to your application, the package will dispatch an event based on the type of webhook
 received.
@@ -104,7 +113,18 @@ class MergeRequestEventListener
 > **Note** You may use individual event listeners for each event type or use a single listener that listens
 > to `WebhookEventContract` that will catch all events dispatched.
 
-> **Note** Please note that some attributes and data is considered **nullable**, and you must implement the necessary null checks on these values.
+> **Note** Please note that some attributes and data is considered **nullable**, and you must implement the necessary
+> null checks on these values.
+
+### Deduplication
+
+Webhook deduplication is not guaranteed by Gitlab. You may use the `uuid` property on each event to handle deduplication
+within your application.
+
+### Security
+
+Each event exposes the headers provided by Gitlab. You may use the `X-Gitlab-Token` header to verify the request
+authenticity against the secret token you have set in your Gitlab project settings.
 
 ## Testing
 
