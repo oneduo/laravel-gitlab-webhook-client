@@ -2,7 +2,6 @@
 
 use Illuminate\Testing\TestResponse;
 use Oneduo\LaravelGitlabWebhookClient\Tests\TestCase;
-
 use function Pest\Laravel\postJson;
 
 uses(TestCase::class)->in(__DIR__);
