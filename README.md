@@ -1,69 +1,110 @@
-# :package_description
+# A client to handle incoming Gitlab webhook requests
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/:vendor_slug/:package_slug/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/:vendor_slug/:package_slug/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/:vendor_slug/:package_slug/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/:vendor_slug/:package_slug/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
-<!--delete-->
----
-This repo can be used to scaffold a Laravel package. Follow these steps to get started:
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/oneduo/laravel-gitlab-webhook-client.svg?style=flat-square)](https://packagist.org/packages/oneduo/laravel-gitlab-webhook-client)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/oneduo/laravel-gitlab-webhook-client/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/oneduo/laravel-gitlab-webhook-client/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/oneduo/laravel-gitlab-webhook-client/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/oneduo/laravel-gitlab-webhook-client/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/oneduo/laravel-gitlab-webhook-client.svg?style=flat-square)](https://packagist.org/packages/oneduo/laravel-gitlab-webhook-client)
 
-1. Press the "Use this template" button at the top of this repo to create a new repo with the contents of this skeleton.
-2. Run "php ./configure.php" to run a script that will replace all placeholders throughout all the files.
-3. Have fun creating your package.
-4. If you need help creating a package, consider picking up our <a href="https://laravelpackage.training">Laravel Package Training</a> video course.
----
-<!--/delete-->
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+This a tiny client that allows you to listen to Gitlab webhooks in your Laravel application. You may use the events
+dispatched and use the data they provide to perform actions in your application.
 
-## Support us
+## Webhook types supported:
 
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/:package_name.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/:package_name)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+- [ ] [Push Events](https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#push-events)
+- [ ] [Tag Events](https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#tag-events)
+- [ ] [Tag Events](https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#tag-events)
+- [x] [Issue Events](https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#issue-events)
+- [ ] [Comments Events](https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#comment-events)
+- [x] [Merge request Events](https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#merge-request-events)
+- [ ] [Wiki page Events](https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#wiki-page-events)
+- [ ] [Pipeline Events](https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#pipeline-events)
+- [ ] [Job Events](https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#job-events)
+- [ ] [Deployment Events](https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#deployment-events)
+- [ ] [Release Events](https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#group-member-events)
+- [ ] [Subgroup Events](https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#subgroup-events)
+- [ ] [Feature flag Events](https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#feature-flag-events)
+- [ ] [Release events](https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#release-events)
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require :vendor_slug/:package_slug
-```
-
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag=":package_slug-migrations"
-php artisan migrate
+composer require oneduo/laravel-gitlab-webhook-client
 ```
 
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag=":package_slug-config"
+php artisan vendor:publish --tag="laravel-gitlab-webhook-client-config"
 ```
 
 This is the contents of the published config file:
 
 ```php
 return [
+    'route_enabled' => true,
 ];
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag=":package_slug-views"
 ```
 
 ## Usage
 
+By default, when the `route_enabled` config is set to true, the package automatically registers a route to handle all
+incoming webhook requests.  
+It is registered as `POST /gitlab-webhook` and you may inspect your routes using the `php artisan route:list` command.
+
+>**Note** If you wish to implement your own route, please take a look at the `WebhookController` to implement a similar logic to
+dispatch events.
+
+When Gitlab sends a webhook request to your application, the package will dispatch an event based on the type of webhook
+received.
+
+For instance, if Gitlab sends a `merge request` webhook, the package will dispatch a `MergeRequestEvent` event.
+
+You may register your own listener like this:
+
 ```php
-$variable = new VendorName\Skeleton();
-echo $variable->echoPhrase('Hello, VendorName!');
+class EventServiceProvider extends ServiceProvider
+{
+    /**
+     * The event to listener mappings for the application.
+     *
+     * @var array<class-string, array<int, class-string>>
+     */
+    protected $listen = [
+        MergeRequestEvent::class => [
+            MergeRequestEventListener::class,
+        ],
+    ];
+}
 ```
+
+All the events are type-hinted to provide easy access to the event attributes and data:
+
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace App;
+
+use App\Gitlab\Events\MergeRequestEvent;
+
+class MergeRequestEventListener
+{
+    public function handle(MergeRequestEvent $event): void
+    {
+        logger()->info('New merge request event received');
+        logger()->info($event->mergeRequest->title);
+        logger()->info('By: ' . $event->mergeRequest->last_commit->author->email);
+    }
+}
+```
+
+> **Note** You may use individual event listeners for each event type or use a single listener that listens
+> to `WebhookEventContract` that will catch all events dispatched.
+
+> **Note** Please note that some attributes and data is considered **nullable**, and you must implement the necessary null checks on these values.
 
 ## Testing
 
@@ -85,7 +126,8 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [:author_name](https://github.com/:author_username)
+- [Charaf Rezrazi](https://github.com/Rezrazi)
+- [Mikaël Popowicz](https://github.com/mikaelpopowicz)
 - [All Contributors](../../contributors)
 
 ## License
