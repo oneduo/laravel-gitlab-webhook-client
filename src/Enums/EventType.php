@@ -8,4 +8,5 @@ enum EventType: string
 {
     case ISSUE = 'issue';
     case MERGE_REQUEST = 'merge_request';
+    case PUSH = 'push';
 }
