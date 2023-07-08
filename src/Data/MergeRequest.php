@@ -15,10 +15,10 @@ class MergeRequest extends Data
         public readonly Project $project,
         public readonly Repository $repository,
         #[DataCollectionOf(Label::class)]
-        public readonly DataCollection $labels,
+        public readonly ?DataCollection $labels,
         public readonly MergeRequestChanges $changes,
         #[DataCollectionOf(User::class)]
-        public readonly DataCollection $assignees,
+        public readonly ?DataCollection $assignees,
 
         public readonly Project $source,
         public readonly Project $target,
@@ -53,6 +53,7 @@ class MergeRequest extends Data
         public readonly ?string $human_time_change,
         public readonly ?string $human_time_estimate,
         public readonly ?string $url,
+        public readonly ?string $action,
     ) {
     }
 }

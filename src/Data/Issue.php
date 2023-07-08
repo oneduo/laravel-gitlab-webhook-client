@@ -18,16 +18,16 @@ class Issue extends Data
         public readonly Project $project,
         public readonly Repository $repository,
         #[DataCollectionOf(Label::class)]
-        public readonly DataCollection $labels,
+        public readonly ?DataCollection $labels,
         #[DataCollectionOf(User::class)]
-        public readonly DataCollection $assignees,
-        public readonly User $assignee,
+        public readonly ?DataCollection $assignees,
+        public readonly ?User $assignee,
         public readonly IssueChanges $changes,
 
         public readonly int $id,
         public readonly string $title,
-        public readonly array $assignee_ids,
-        public readonly int $assignee_id,
+        public readonly ?array $assignee_ids,
+        public readonly ?int $assignee_id,
         public readonly int $author_id,
         public readonly int $project_id,
         #[WithCast(DateTimeInterfaceCast::class)]
