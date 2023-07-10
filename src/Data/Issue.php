@@ -34,8 +34,8 @@ class Issue extends Data
         public readonly string $url,
         public readonly ?array $assignee_ids,
         public readonly ?array $escalation_policy,
-        public readonly bool $confidential,
-        public readonly bool $discussion_locked,
+        public readonly ?bool $confidential,
+        public readonly ?bool $discussion_locked,
         public readonly ?int $assignee_id,
         public readonly ?int $duplicated_to_id,
         public readonly ?int $last_edited_by_id,
@@ -54,15 +54,16 @@ class Issue extends Data
         public readonly ?string $human_time_change,
         public readonly ?string $human_time_estimate,
         public readonly ?string $human_total_time_spent,
-        public readonly ?string $last_edited_at,
         public readonly ?string $severity,
         public readonly ?string $state,
-        #[WithCast(GitlabUTCDatetimeCast::class)]
-        public readonly ?Carbon $due_date,
         #[WithCast(GitlabUTCDatetimeCast::class)]
         public readonly Carbon $created_at,
         #[WithCast(GitlabUTCDatetimeCast::class)]
         public readonly ?Carbon $updated_at,
+        #[WithCast(GitlabUTCDatetimeCast::class)]
+        public readonly ?Carbon $last_edited_at,
+        #[WithCast(GitlabUTCDatetimeCast::class)]
+        public readonly ?Carbon $due_date,
     ) {
     }
 }
