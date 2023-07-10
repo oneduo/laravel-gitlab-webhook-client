@@ -7,7 +7,6 @@ namespace Oneduo\LaravelGitlabWebhookClient\Data;
 use Carbon\Carbon;
 use Oneduo\LaravelGitlabWebhookClient\Data\Casts\GitlabUTCDatetimeCast;
 use Spatie\LaravelData\Attributes\WithCast;
-use Spatie\LaravelData\Casts\DateTimeInterfaceCast;
 use Spatie\LaravelData\Data;
 
 class Label extends Data
