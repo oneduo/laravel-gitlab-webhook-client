@@ -8,7 +8,7 @@ it('dispatches an event for NoteEvent', function () {
 
     Event::fake();
 
-    sendWebhook(__DIR__ . '/../fixtures/note.json')
+    sendWebhook(__DIR__.'/../fixtures/note.json')
         ->assertNoContent();
 
     Event::assertDispatched(NoteEvent::class);
