@@ -14,7 +14,7 @@ dispatched and use the data they provide to perform actions in your application.
 - [ ] [Tag Events](https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#tag-events)
 - [ ] [Tag Events](https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#tag-events)
 - [x] [Issue Events](https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#issue-events)
-- [ ] [Comments Events](https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#comment-events)
+- [x] [Comments Events](https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#comment-events)
 - [x] [Merge request Events](https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#merge-request-events)
 - [ ] [Wiki page Events](https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#wiki-page-events)
 - [ ] [Pipeline Events](https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#pipeline-events)
