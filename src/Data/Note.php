@@ -21,7 +21,7 @@ class Note extends Data
         public readonly ?Snippet $snippet,
 
         public readonly int $id,
-        public readonly int $noteable_id,
+        public readonly ?int $noteable_id,
         public readonly NotableType $noteable_type,
         public readonly int $author_id,
         public readonly int $project_id,

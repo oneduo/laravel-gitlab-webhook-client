@@ -15,7 +15,22 @@ return [
     |
     | This registers the following route: POST /gitlab-webhook
     |
-    | default: true
+    | Default: true
     */
     'route_enabled' => true,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Secret Token Middleware
+    |--------------------------------------------------------------------------
+    |
+    | You may set the value of the secret token defined in Gitlab.
+    | The package will validate all incoming requests against this given token,
+    | and reject all unauthorized requests.
+    |
+    | Set the value to NULL to disable the middleware.
+    |
+    | Default: null
+    */
+    'secret_token' => env('GITLAB_WEBHOOK_SECRET_TOKEN'),
 ];

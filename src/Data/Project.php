@@ -9,8 +9,8 @@ use Spatie\LaravelData\Data;
 class Project extends Data
 {
     public function __construct(
-        public readonly int $id,
-        public readonly string $name,
+        public readonly ?int $id,
+        public readonly ?string $name,
         public readonly string $url,
         public readonly ?string $description,
         public readonly ?string $web_url,
