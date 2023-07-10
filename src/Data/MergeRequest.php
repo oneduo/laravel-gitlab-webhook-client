@@ -30,7 +30,7 @@ class MergeRequest extends Data
 
         public readonly int $id,
         public readonly int $iid,
-        public readonly MergeRequestAction $action,
+        public readonly ?MergeRequestAction $action,
         public readonly int $author_id,
         public readonly int $source_project_id,
         public readonly int $target_project_id,
