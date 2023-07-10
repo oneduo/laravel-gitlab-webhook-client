@@ -16,19 +16,19 @@ class Push extends Data
         #[DataCollectionOf(Commit::class)]
         public readonly DataCollection $commits,
 
-        public readonly string $before,
-        public readonly string $after,
-        public readonly string $ref,
-        public readonly string $checkout_sha,
-        public readonly ?string $message,
         public readonly int $user_id,
+        public readonly int $project_id,
+        public readonly ?array $push_options,
+        public readonly ?int $total_commits_count,
+        public readonly ?string $after,
+        public readonly ?string $before,
+        public readonly ?string $checkout_sha,
+        public readonly ?string $message,
+        public readonly ?string $ref,
+        public readonly ?string $user_avatar,
+        public readonly ?string $user_email,
         public readonly ?string $user_name,
         public readonly ?string $user_username,
-        public readonly ?string $user_email,
-        public readonly ?string $user_avatar,
-        public readonly int $project_id,
-        public readonly int $total_commits_count,
-        public readonly ?array $push_options,
     ) {
     }
 }

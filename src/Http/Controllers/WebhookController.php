@@ -20,8 +20,8 @@ class WebhookController extends Controller
             payload: $request->input(),
             headers: collect($request->headers->all())
                 ->keys()
-                ->filter(fn (string $key) => str_starts_with($key, 'x-gitlab'))
-                ->map(fn (string $header) => $request->header($header))
+                ->filter(fn(string $key) => str_starts_with($key, 'x-gitlab'))
+                ->mapWithKeys(fn(string $header) => [$header => $request->header($header)])
                 ->toArray(),
         );
 

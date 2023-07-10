@@ -9,10 +9,10 @@ use Spatie\LaravelData\Data;
 class Repository extends Data
 {
     public function __construct(
-        public string $name,
-        public string $url,
-        public ?string $description,
-        public ?string $homepage,
+        public readonly string $name,
+        public readonly string $url,
+        public readonly ?string $description,
+        public readonly ?string $homepage,
     ) {
     }
 }

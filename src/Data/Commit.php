@@ -13,15 +13,15 @@ class Commit extends Data
 {
     public function __construct(
         public string $id,
-        public string $message,
         public string $title,
-        #[WithCast(DateTimeInterfaceCast::class)]
-        public Carbon $timestamp,
+        public ?string $message,
         public string $url,
         public Author $author,
         public ?array $added,
         public ?array $modified,
         public ?array $removed,
+        #[WithCast(DateTimeInterfaceCast::class)]
+        public Carbon $timestamp,
     ) {
     }
 }

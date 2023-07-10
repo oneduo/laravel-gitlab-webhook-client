@@ -16,6 +16,7 @@ class EventFactory
             EventType::ISSUE => IssueEvent::class,
             EventType::MERGE_REQUEST => MergeRequestEvent::class,
             EventType::PUSH => PushEvent::class,
+            EventType::NOTE => NoteEvent::class,
             default => null,
         };
 

@@ -12,9 +12,9 @@ class LabelUpdate extends Data
 {
     public function __construct(
         #[DataCollectionOf(Label::class)]
-        public readonly DataCollection $previous,
+        public readonly ?DataCollection $previous,
         #[DataCollectionOf(Label::class)]
-        public readonly DataCollection $current,
+        public readonly ?DataCollection $current,
     ) {
     }
 }

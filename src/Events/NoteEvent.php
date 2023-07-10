@@ -6,16 +6,16 @@ namespace Oneduo\LaravelGitlabWebhookClient\Events;
 
 use Illuminate\Foundation\Events\Dispatchable;
 use Oneduo\LaravelGitlabWebhookClient\Contracts\WebhookEventContract;
-use Oneduo\LaravelGitlabWebhookClient\Data\Push;
+use Oneduo\LaravelGitlabWebhookClient\Data\Note;
 
-class PushEvent implements WebhookEventContract
+class NoteEvent implements WebhookEventContract
 {
     use Dispatchable;
 
     public function __construct(
         public readonly string $uuid,
         public readonly array $headers,
-        public readonly Push $push,
+        public readonly Note $note,
     ) {
     }
 
@@ -24,11 +24,15 @@ class PushEvent implements WebhookEventContract
         return new self(
             uuid: $uuid,
             headers: $headers,
-            push: Push::from([
+            note: Note::from([
                 'project' => data_get($payload, 'project'),
                 'repository' => data_get($payload, 'repository'),
-                'commits' => data_get($payload, 'commits'),
-                ...$payload,
+                'commit' => data_get($payload, 'commits'),
+                'merge_request' => data_get($payload, 'merge_request'),
+                'issue' => data_get($payload, 'issue'),
+                'snippet' => data_get($payload, 'snippet'),
+                'user' => data_get($payload, 'user'),
+                ...data_get($payload, 'object_attributes', []),
             ]),
         );
     }
