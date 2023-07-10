@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Oneduo\LaravelGitlabWebhookClient\Data;
 
 use Carbon\Carbon;
+use Oneduo\LaravelGitlabWebhookClient\Data\Casts\GitlabUTCDatetimeCast;
 use Oneduo\LaravelGitlabWebhookClient\Enums\IssueAction;
 use Spatie\LaravelData\Attributes\DataCollectionOf;
 use Spatie\LaravelData\Attributes\WithCast;
@@ -57,11 +58,11 @@ class Issue extends Data
         public readonly ?string $last_edited_at,
         public readonly ?string $severity,
         public readonly ?string $state,
-        #[WithCast(DateTimeInterfaceCast::class)]
+        #[WithCast(GitlabUTCDatetimeCast::class)]
         public readonly ?Carbon $due_date,
-        #[WithCast(DateTimeInterfaceCast::class)]
+        #[WithCast(GitlabUTCDatetimeCast::class)]
         public readonly Carbon $created_at,
-        #[WithCast(DateTimeInterfaceCast::class)]
+        #[WithCast(GitlabUTCDatetimeCast::class)]
         public readonly ?Carbon $updated_at,
     ) {
     }
