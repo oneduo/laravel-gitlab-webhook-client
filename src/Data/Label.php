@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Oneduo\LaravelGitlabWebhookClient\Data;
 
 use Carbon\Carbon;
+use Oneduo\LaravelGitlabWebhookClient\Data\Casts\GitlabUTCDatetimeCast;
 use Spatie\LaravelData\Attributes\WithCast;
 use Spatie\LaravelData\Casts\DateTimeInterfaceCast;
 use Spatie\LaravelData\Data;
@@ -20,9 +21,9 @@ class Label extends Data
         public readonly ?string $color,
         public readonly ?string $description,
         public readonly ?string $type,
-        #[WithCast(DateTimeInterfaceCast::class)]
+        #[WithCast(GitlabUTCDatetimeCast::class)]
         public readonly Carbon $created_at,
-        #[WithCast(DateTimeInterfaceCast::class)]
+        #[WithCast(GitlabUTCDatetimeCast::class)]
         public readonly ?Carbon $updated_at,
     ) {
     }
