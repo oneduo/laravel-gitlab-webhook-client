@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-gitlab-webhook-client` will be documented in this file.
 
+## v0.1.7 - 2023-07-10
+
+**Full Changelog**: https://github.com/oneduo/laravel-gitlab-webhook-client/compare/v0.1.6...v0.1.7
+
 ## v0.1.6 - 2023-07-10
 
 **Full Changelog**: https://github.com/oneduo/laravel-gitlab-webhook-client/compare/v0.1.5...v0.1.6
