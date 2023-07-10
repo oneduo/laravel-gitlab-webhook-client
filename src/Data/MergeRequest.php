@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Oneduo\LaravelGitlabWebhookClient\Data;
 
 use Carbon\Carbon;
+use Oneduo\LaravelGitlabWebhookClient\Data\Casts\GitlabUTCDatetimeCast;
 use Oneduo\LaravelGitlabWebhookClient\Enums\MergeRequestAction;
 use Spatie\LaravelData\Attributes\DataCollectionOf;
 use Spatie\LaravelData\Attributes\WithCast;
@@ -55,11 +56,11 @@ class MergeRequest extends Data
         public readonly ?string $source_branch,
         public readonly ?string $state,
         public readonly ?string $target_branch,
-        #[WithCast(DateTimeInterfaceCast::class)]
+        #[WithCast(GitlabUTCDatetimeCast::class)]
         public readonly Carbon $created_at,
-        #[WithCast(DateTimeInterfaceCast::class)]
+        #[WithCast(GitlabUTCDatetimeCast::class)]
         public readonly ?Carbon $updated_at,
-        #[WithCast(DateTimeInterfaceCast::class)]
+        #[WithCast(GitlabUTCDatetimeCast::class)]
         public readonly ?Carbon $last_edited_at,
     ) {
     }
