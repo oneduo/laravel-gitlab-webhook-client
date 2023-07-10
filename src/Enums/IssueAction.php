@@ -9,5 +9,5 @@ enum IssueAction: string
     case OPEN = 'open';
     case CLOSE = 'close';
     case REOPEN = 'reopen';
-    case UPDATE = 'updated';
+    case UPDATE = 'update';
 }
