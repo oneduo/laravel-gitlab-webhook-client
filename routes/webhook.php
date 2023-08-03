@@ -8,7 +8,7 @@ use Oneduo\LaravelGitlabWebhookClient\Http\Middleware\AcceptJsonMiddleware;
 use Oneduo\LaravelGitlabWebhookClient\Http\Middleware\SecretTokenMiddleware;
 
 if (config('gitlab-webhook-client.route_enabled')) {
-    Route::post('gitlab-webhook', WebhookController::class)
+    Route::post(config('gitlab-webhook-client.route_path'), WebhookController::class)
         ->middleware([AcceptJsonMiddleware::class, SecretTokenMiddleware::class])
-        ->name('gitlab-webhook');
+        ->name(config('gitlab-webhook-client.route_name'));
 }
