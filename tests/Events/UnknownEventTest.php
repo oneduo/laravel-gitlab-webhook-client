@@ -12,7 +12,7 @@ it('does not dispatch an event when push type event_type is unknown', function (
         MergeRequestEvent::class,
     ]);
 
-    sendWebhook(__DIR__.'/../fixtures/unknown.json')
+    sendWebhook(__DIR__.'/../Fixtures/unknown.json')
         ->assertServerError();
 
     Event::assertNothingDispatched();
