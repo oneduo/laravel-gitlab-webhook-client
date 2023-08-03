@@ -15,8 +15,9 @@ class EventFactory
         $class = match (EventType::tryFrom(data_get($payload, 'object_kind'))) {
             EventType::ISSUE => IssueEvent::class,
             EventType::MERGE_REQUEST => MergeRequestEvent::class,
-            EventType::PUSH => PushEvent::class,
             EventType::NOTE => NoteEvent::class,
+            EventType::PIPELINE => PipelineEvent::class,
+            EventType::PUSH => PushEvent::class,
             default => null,
         };
 

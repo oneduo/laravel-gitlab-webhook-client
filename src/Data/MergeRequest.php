@@ -16,22 +16,22 @@ class MergeRequest extends Data
 {
     public function __construct(
         public readonly User $user,
-        public readonly Project $project,
-        public readonly Repository $repository,
+        public readonly ?Project $project,
+        public readonly ?Repository $repository,
         #[DataCollectionOf(Label::class)]
         public readonly ?DataCollection $labels,
         public readonly ?MergeRequestChanges $changes,
         #[DataCollectionOf(User::class)]
         public readonly ?DataCollection $assignees,
 
-        public readonly Project $source,
-        public readonly Project $target,
+        public readonly ?Project $source,
+        public readonly ?Project $target,
         public readonly ?Commit $last_commit,
 
         public readonly int $id,
         public readonly int $iid,
         public readonly ?MergeRequestAction $action,
-        public readonly int $author_id,
+        public readonly ?int $author_id,
         public readonly int $source_project_id,
         public readonly int $target_project_id,
         public readonly string $title,
@@ -56,7 +56,7 @@ class MergeRequest extends Data
         public readonly ?string $state,
         public readonly ?string $target_branch,
         #[WithCast(GitlabUTCDatetimeCast::class)]
-        public readonly Carbon $created_at,
+        public readonly ?Carbon $created_at,
         #[WithCast(GitlabUTCDatetimeCast::class)]
         public readonly ?Carbon $updated_at,
         #[WithCast(GitlabUTCDatetimeCast::class)]

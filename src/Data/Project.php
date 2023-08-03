@@ -11,7 +11,7 @@ class Project extends Data
     public function __construct(
         public readonly ?int $id,
         public readonly ?string $name,
-        public readonly string $url,
+        public readonly ?string $url,
         public readonly ?string $description,
         public readonly ?string $web_url,
         public readonly ?string $avatar_url,
