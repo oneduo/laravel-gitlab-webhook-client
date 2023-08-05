@@ -13,11 +13,36 @@ return [
     | the route in your application and implement the event dispatching logic
     | within your route.
     |
-    | This registers the following route: POST /gitlab-webhook
+    | See "route_path" and "route_name" config options for further customisation.
     |
     | Default: true
     */
     'route_enabled' => true,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Webhook route's path
+    |--------------------------------------------------------------------------
+    |
+    | Here you may choose path under which webhook route is registered.
+    |
+    | This registers the route with POST method under specified path.
+    | Leading path is not required.
+    |
+    | Default: gitlab-webhook
+    */
+    'route_path' => env('GITLAB_WEBHOOK_ROUTE_PATH', 'gitlab-webhook'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Webhook route's name (alias)
+    |--------------------------------------------------------------------------
+    |
+    | Here you may choose name (alias) under which webhook route is registered.
+    |
+    | Default: gitlab-webhook
+    */
+    'route_name' => env('GITLAB_WEBHOOK_ROUTE_NAME', 'gitlab-webhook'),
 
     /*
     |--------------------------------------------------------------------------
