@@ -2,6 +2,19 @@
 
 All notable changes to `laravel-gitlab-webhook-client` will be documented in this file.
 
+## v0.1.8 - 2023-08-05
+
+### What's Changed
+
+- Add support for Pipeline Events by @Wirone in https://github.com/oneduo/laravel-gitlab-webhook-client/pull/5
+- Allow customising route for handling Gitlab Webhooks by @Wirone in https://github.com/oneduo/laravel-gitlab-webhook-client/pull/6
+
+### New Contributors
+
+- @Wirone made their first contribution in https://github.com/oneduo/laravel-gitlab-webhook-client/pull/5
+
+**Full Changelog**: https://github.com/oneduo/laravel-gitlab-webhook-client/compare/v0.1.7...v0.1.8
+
 ## v0.1.7 - 2023-07-10
 
 **Full Changelog**: https://github.com/oneduo/laravel-gitlab-webhook-client/compare/v0.1.6...v0.1.7
