@@ -1,0 +1,147 @@
+{
+  "object_kind": "pipeline",
+  "object_attributes": {
+    "id": 1,
+    "iid": 1,
+    "name": null,
+    "ref": "feature/foo",
+    "tag": false,
+    "sha": "167686b0423438194a6a53eb02a1211f565f2e4e",
+    "before_sha": "167686b0423438194a6a53eb02a1211f565f2e4e",
+    "source": "merge_request_event",
+    "status": "running",
+    "detailed_status": "running",
+    "stages": [
+      "Build",
+      "Test"
+    ],
+    "created_at": "2023-08-02 11:21:00 UTC",
+    "finished_at": "2023-08-02 11:44:39 UTC",
+    "duration": 307,
+    "queued_duration": 62,
+    "variables": [
+    ],
+    "url": "http://example.com/foo/bar/-/pipelines/1"
+  },
+  "merge_request": {
+    "id": 1,
+    "iid": 1,
+    "title": "feat: Implement support for Pipeline Events",
+    "source_branch": "feature/foo",
+    "source_project_id": 1,
+    "target_branch": "main",
+    "target_project_id": 1,
+    "state": "opened",
+    "merge_status": "can_be_merged",
+    "detailed_merge_status": "not_approved",
+    "url": "http://example.com/foo/bar/-/merge_requests/14853"
+  },
+  "user": {
+    "id": 1,
+    "name": "John Doe",
+    "username": "jdoe",
+    "avatar_url": null,
+    "email": "john.doe@example.com"
+  },
+  "project": {
+    "id": 1,
+    "name": "bar",
+    "description": "Foo Bar",
+    "web_url": "http://example.com/foo/bar",
+    "avatar_url": "http://example.com/foo/bar/-/avatar",
+    "git_ssh_url": "git@example.com:foo/bar.git",
+    "git_http_url": "http://example.com/foo/bar.git",
+    "namespace": "foo",
+    "visibility_level": 0,
+    "path_with_namespace": "foo/bar",
+    "default_branch": "main",
+    "ci_config_path": ""
+  },
+  "commit": {
+    "id": "167686b0423438194a6a53eb02a1211f565f2e4e",
+    "message": "Implement support for Pipeline Events\n\nLet's support another event!",
+    "title": "Implement support for Pipeline Events",
+    "timestamp": "2023-08-02T11:20:56+00:00",
+    "url": "http://example.com/foo/bar/-/commit/167686b0423438194a6a53eb02a1211f565f2e4e",
+    "author": {
+      "name": "John Doe",
+      "email": "john.doe@example.com"
+    }
+  },
+  "builds": [
+    {
+      "id": 1,
+      "stage": "Build",
+      "name": "build:image:dev",
+      "status": "success",
+      "created_at": "2023-08-02 11:21:00 UTC",
+      "started_at": "2023-08-02 11:22:02 UTC",
+      "finished_at": "2023-08-02 11:22:41 UTC",
+      "duration": 39.19261,
+      "queued_duration": 61.083525,
+      "failure_reason": null,
+      "when": "on_success",
+      "manual": false,
+      "allow_failure": false,
+      "user": {
+        "id": 1,
+        "name": "John Doe",
+        "avatar_url": null,
+        "email": "john.doe@example.com"
+      },
+      "runner": {
+        "id": 1,
+        "description": "k8s-ci",
+        "runner_type": "instance_type",
+        "active": true,
+        "is_shared": true,
+        "tags": [
+          "k8s-ci",
+          "kubernetes-ci"
+        ]
+      },
+      "artifacts_file": {
+        "filename": null,
+        "size": null
+      },
+      "environment": null
+    },
+    {
+      "id": 2,
+      "stage": "Test",
+      "name": "test:unit",
+      "status": "success",
+      "created_at": "2023-08-02 11:21:00 UTC",
+      "started_at": "2023-08-02 11:22:42 UTC",
+      "finished_at": "2023-08-02 11:24:02 UTC",
+      "duration": 80.461449,
+      "queued_duration": 0.522503,
+      "failure_reason": null,
+      "when": "on_success",
+      "manual": false,
+      "allow_failure": false,
+      "user": {
+        "id": 1,
+        "name": "John Doe",
+        "avatar_url": null,
+        "email": "john.doe@example.com"
+      },
+      "runner": {
+        "id": 263,
+        "description": "k8s-ci",
+        "runner_type": "instance_type",
+        "active": true,
+        "is_shared": true,
+        "tags": [
+          "k8s-ci",
+          "kubernetes-ci"
+        ]
+      },
+      "artifacts_file": {
+        "filename": null,
+        "size": null
+      },
+      "environment": null
+    }
+  ]
+}

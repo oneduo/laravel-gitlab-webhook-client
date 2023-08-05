@@ -8,7 +8,7 @@ use Oneduo\LaravelGitlabWebhookClient\Events\MergeRequestEvent;
 it('dispatches an event for MergeRequestEvent', function () {
     Event::fake();
 
-    sendWebhook(__DIR__.'/../fixtures/mr.json')
+    sendWebhook(__DIR__.'/../Fixtures/mr.json')
         ->assertNoContent();
 
     Event::assertDispatched(MergeRequestEvent::class);
