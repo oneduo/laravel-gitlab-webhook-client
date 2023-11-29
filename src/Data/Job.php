@@ -21,8 +21,8 @@ class Job extends Data
         public readonly ?Carbon $started_at,
         #[WithCast(GitlabUTCDatetimeCast::class)]
         public readonly ?Carbon $finished_at,
-        public readonly float $duration,
-        public readonly float $queued_duration,
+        public readonly ?float $duration,
+        public readonly ?float $queued_duration,
         public readonly ?string $failure_reason,
         public readonly string $when,
         public readonly bool $manual,
