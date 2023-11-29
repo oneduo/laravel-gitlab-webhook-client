@@ -28,7 +28,7 @@ class Job extends Data
         public readonly bool $manual,
         public readonly bool $allow_failure,
         public readonly User $user,
-        public readonly Runner $runner,
+        public readonly ?Runner $runner,
         public readonly ArtifactsFile $artifacts_file,
         public readonly ?Environment $environment,
     ) {
