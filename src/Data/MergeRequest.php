@@ -6,6 +6,7 @@ namespace Oneduo\LaravelGitlabWebhookClient\Data;
 
 use Carbon\Carbon;
 use Oneduo\LaravelGitlabWebhookClient\Data\Casts\GitlabUTCDatetimeCast;
+use Oneduo\LaravelGitlabWebhookClient\Enums\DetailedMergeStatus;
 use Oneduo\LaravelGitlabWebhookClient\Enums\MergeRequestAction;
 use Spatie\LaravelData\Attributes\DataCollectionOf;
 use Spatie\LaravelData\Attributes\WithCast;
@@ -36,6 +37,8 @@ class MergeRequest extends Data
         public readonly int $target_project_id,
         public readonly string $title,
         public readonly string $merge_status,
+        // Introduced in Gitlab 15.6, so can be undefined in older Gitlab instances
+        public readonly ?DetailedMergeStatus $detailed_merge_status,
         public readonly ?string $merge_commit_sha,
         public readonly string $url,
         public readonly ?array $assignee_ids,
