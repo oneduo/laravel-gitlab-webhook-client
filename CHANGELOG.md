@@ -2,6 +2,16 @@
 
 All notable changes to `laravel-gitlab-webhook-client` will be documented in this file.
 
+## v0.1.9 - 2023-12-06
+
+### What's Changed
+
+* build(deps): bump actions/checkout from 3 to 4 by @dependabot in https://github.com/oneduo/laravel-gitlab-webhook-client/pull/7
+* build(deps): bump stefanzweifel/git-auto-commit-action from 4 to 5 by @dependabot in https://github.com/oneduo/laravel-gitlab-webhook-client/pull/8
+* fix: Jobs' duration and runner may be null by @Wirone in https://github.com/oneduo/laravel-gitlab-webhook-client/pull/10
+
+**Full Changelog**: https://github.com/oneduo/laravel-gitlab-webhook-client/compare/v0.1.8...v0.1.9
+
 ## v0.1.8 - 2023-08-05
 
 ### What's Changed
