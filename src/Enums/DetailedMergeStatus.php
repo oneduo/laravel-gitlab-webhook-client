@@ -6,6 +6,7 @@ namespace Oneduo\LaravelGitlabWebhookClient\Enums;
 
 /**
  * @see https://docs.gitlab.com/ee/api/merge_requests.html#merge-status
+ * @see https://gitlab.com/gitlab-org/gitlab/-/blob/master/app/graphql/types/merge_requests/detailed_merge_status_enum.rb
  */
 enum DetailedMergeStatus: string
 {
@@ -22,5 +23,6 @@ enum DetailedMergeStatus: string
     case NOT_APPROVED = 'not_approved';
     case NOT_OPEN = 'not_open';
     case POLICIES_DENIED = 'policies_denied';
+    case PREPARING = 'preparing';
     case UNCHECKED = 'unchecked';
 }
