@@ -36,6 +36,7 @@ class MergeRequest extends Data
         public readonly int $target_project_id,
         public readonly string $title,
         public readonly string $merge_status,
+        public readonly ?string $merge_commit_sha,
         public readonly string $url,
         public readonly ?array $assignee_ids,
         public readonly ?array $reviewer_ids,

@@ -58,6 +58,7 @@
     "work_in_progress": false,
     "first_contribution": true,
     "merge_status": "unchecked",
+    "merge_commit_sha": "8668f6c79437988556699424f3a40ec0388be1d6",
     "target_project_id": 14,
     "description": "",
     "total_time_spent": 1800,
