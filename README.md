@@ -36,7 +36,7 @@ composer require oneduo/laravel-gitlab-webhook-client
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag="laravel-gitlab-webhook-client-config"
+php artisan vendor:publish --tag="gitlab-webhook-client-config"
 ```
 
 This is the contents of the published config file:
