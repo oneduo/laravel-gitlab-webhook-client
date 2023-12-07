@@ -26,11 +26,11 @@ class PipelineEvent implements WebhookEventContract
             headers: $headers,
             pipeline: Pipeline::from([
                 'attributes' => data_get($payload, 'object_attributes'),
-                'merge_request' => [
+                'merge_request' => isset($payload['merge_request']) ? [
                     'user' => data_get($payload, 'user'),
                     'project' => data_get($payload, 'project'),
                     ...data_get($payload, 'merge_request'),
-                ],
+                ] : null,
                 'user' => data_get($payload, 'user'),
                 'project' => data_get($payload, 'project'),
                 'commit' => data_get($payload, 'commit'),
