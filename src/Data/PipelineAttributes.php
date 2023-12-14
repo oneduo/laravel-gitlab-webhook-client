@@ -30,7 +30,7 @@ class PipelineAttributes extends Data
         public readonly Carbon $created_at,
         #[WithCast(GitlabUTCDatetimeCast::class)]
         public readonly ?Carbon $finished_at,
-        public readonly int $duration,
+        public readonly ?int $duration,
         public readonly int $queued_duration,
         #[DataCollectionOf(CiVariable::class)]
         public readonly ?DataCollection $variables,
