@@ -13,7 +13,7 @@ class Label extends Data
 {
     public function __construct(
         public readonly int $id,
-        public readonly int $project_id,
+        public readonly ?int $project_id,
         public readonly bool $template,
         public readonly string $title,
         public readonly ?int $group_id,
