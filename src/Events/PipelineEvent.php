@@ -15,7 +15,7 @@ class PipelineEvent implements WebhookEventContract
     public function __construct(
         public readonly string $uuid,
         public readonly array $headers,
-        public readonly Pipeline $push,
+        public readonly Pipeline $pipeline,
     ) {
     }
 
@@ -24,13 +24,13 @@ class PipelineEvent implements WebhookEventContract
         return new self(
             uuid: $uuid,
             headers: $headers,
-            push: Pipeline::from([
+            pipeline: Pipeline::from([
                 'attributes' => data_get($payload, 'object_attributes'),
-                'merge_request' => [
+                'merge_request' => isset($payload['merge_request']) ? [
                     'user' => data_get($payload, 'user'),
                     'project' => data_get($payload, 'project'),
                     ...data_get($payload, 'merge_request'),
-                ],
+                ] : null,
                 'user' => data_get($payload, 'user'),
                 'project' => data_get($payload, 'project'),
                 'commit' => data_get($payload, 'commit'),

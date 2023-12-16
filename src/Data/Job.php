@@ -15,6 +15,7 @@ class Job extends Data
         public readonly int $id,
         public readonly string $stage,
         public readonly string $name,
+        public readonly string $status,
         #[WithCast(GitlabUTCDatetimeCast::class)]
         public readonly Carbon $created_at,
         #[WithCast(GitlabUTCDatetimeCast::class)]
