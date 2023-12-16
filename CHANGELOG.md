@@ -2,6 +2,14 @@
 
 All notable changes to `laravel-gitlab-webhook-client` will be documented in this file.
 
+## v0.1.10 - 2023-12-16
+
+### What's Changed
+
+* Yet another fixes for data models by @Wirone in https://github.com/oneduo/laravel-gitlab-webhook-client/pull/11
+
+**Full Changelog**: https://github.com/oneduo/laravel-gitlab-webhook-client/compare/v0.1.9...v0.1.10
+
 ## v0.1.9 - 2023-12-06
 
 ### What's Changed
