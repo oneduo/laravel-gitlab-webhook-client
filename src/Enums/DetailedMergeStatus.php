@@ -20,6 +20,7 @@ enum DetailedMergeStatus: string
     case EXTERNAL_STATUS_CHECKS = 'external_status_checks';
     case JIRA_ASSOCIATION_MISSING = 'jira_association_missing';
     case MERGEABLE = 'mergeable';
+    case MERGE_REQUEST_BLOCKED = 'merge_request_blocked';
     case NOT_APPROVED = 'not_approved';
     case NOT_OPEN = 'not_open';
     case POLICIES_DENIED = 'policies_denied';
