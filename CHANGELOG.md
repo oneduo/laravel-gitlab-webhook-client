@@ -2,6 +2,15 @@
 
 All notable changes to `laravel-gitlab-webhook-client` will be documented in this file.
 
+## v0.1.11 - 2024-01-11
+
+### What's Changed
+
+* build(deps): bump aglipanci/laravel-pint-action from 2.3.0 to 2.3.1 by @dependabot in https://github.com/oneduo/laravel-gitlab-webhook-client/pull/12
+* Support `merge_request_blocked` status by @Wirone in https://github.com/oneduo/laravel-gitlab-webhook-client/pull/13
+
+**Full Changelog**: https://github.com/oneduo/laravel-gitlab-webhook-client/compare/v0.1.10...v0.1.11
+
 ## v0.1.10 - 2023-12-16
 
 ### What's Changed
