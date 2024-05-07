@@ -15,6 +15,7 @@ enum DetailedMergeStatus: string
     case CHECKING = 'checking';
     case CI_MUST_PASS = 'ci_must_pass';
     case CI_STILL_RUNNING = 'ci_still_running';
+    case CONFLICT = 'conflict';
     case DISCUSSIONS_NOT_RESOLVED = 'discussions_not_resolved';
     case DRAFT_STATUS = 'draft_status';
     case EXTERNAL_STATUS_CHECKS = 'external_status_checks';
