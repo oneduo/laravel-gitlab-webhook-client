@@ -2,6 +2,17 @@
 
 All notable changes to `laravel-gitlab-webhook-client` will be documented in this file.
 
+## v0.1.12 - 2024-05-12
+
+### What's Changed
+
+* build(deps): bump aglipanci/laravel-pint-action from 2.3.1 to 2.4 by @dependabot in https://github.com/oneduo/laravel-gitlab-webhook-client/pull/16
+* Update Gitlab models by @Wirone in https://github.com/oneduo/laravel-gitlab-webhook-client/pull/18
+* build(deps): bump dependabot/fetch-metadata from 1.6.0 to 2.1.0 by @dependabot in https://github.com/oneduo/laravel-gitlab-webhook-client/pull/17
+* build(deps): bump ramsey/composer-install from 2 to 3 by @dependabot in https://github.com/oneduo/laravel-gitlab-webhook-client/pull/14
+
+**Full Changelog**: https://github.com/oneduo/laravel-gitlab-webhook-client/compare/v0.1.11...v0.1.12
+
 ## v0.1.11 - 2024-01-11
 
 ### What's Changed
