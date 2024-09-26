@@ -64,6 +64,5 @@ class Issue extends Data
         public readonly ?Carbon $last_edited_at,
         #[WithCast(GitlabUTCDatetimeCast::class)]
         public readonly ?Carbon $due_date,
-    ) {
-    }
+    ) {}
 }

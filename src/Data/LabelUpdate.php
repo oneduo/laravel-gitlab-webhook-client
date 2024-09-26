@@ -15,6 +15,5 @@ class LabelUpdate extends Data
         public readonly ?DataCollection $previous,
         #[DataCollectionOf(Label::class)]
         public readonly ?DataCollection $current,
-    ) {
-    }
+    ) {}
 }

@@ -25,6 +25,5 @@ class Project extends Data
         public readonly ?string $homepage,
         public readonly ?string $ssh_url,
         public readonly ?string $http_url,
-    ) {
-    }
+    ) {}
 }

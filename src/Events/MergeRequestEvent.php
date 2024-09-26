@@ -16,8 +16,7 @@ class MergeRequestEvent implements WebhookEventContract
         public readonly string $uuid,
         public readonly array $headers,
         public readonly MergeRequest $mergeRequest,
-    ) {
-    }
+    ) {}
 
     public static function build(string $uuid, array $payload, array $headers): self
     {

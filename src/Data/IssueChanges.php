@@ -12,6 +12,5 @@ class IssueChanges extends Data
         public readonly ?IdentifierUpdate $updated_by_id,
         public readonly ?TimeUpdate $updated_at,
         public readonly ?LabelUpdate $labels,
-    ) {
-    }
+    ) {}
 }

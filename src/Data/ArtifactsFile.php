@@ -11,6 +11,5 @@ class ArtifactsFile extends Data
     public function __construct(
         public readonly ?string $filename,
         public readonly ?string $size,
-    ) {
-    }
+    ) {}
 }

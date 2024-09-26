@@ -16,8 +16,7 @@ class NoteEvent implements WebhookEventContract
         public readonly string $uuid,
         public readonly array $headers,
         public readonly Note $note,
-    ) {
-    }
+    ) {}
 
     public static function build(string $uuid, array $payload, array $headers): self
     {

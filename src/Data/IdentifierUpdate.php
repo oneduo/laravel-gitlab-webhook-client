@@ -11,6 +11,5 @@ class IdentifierUpdate extends Data
     public function __construct(
         public readonly ?int $previous,
         public readonly ?int $current,
-    ) {
-    }
+    ) {}
 }

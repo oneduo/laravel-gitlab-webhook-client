@@ -29,6 +29,5 @@ class Push extends Data
         public readonly ?string $user_email,
         public readonly ?string $user_name,
         public readonly ?string $user_username,
-    ) {
-    }
+    ) {}
 }

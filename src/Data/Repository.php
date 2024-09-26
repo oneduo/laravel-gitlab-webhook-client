@@ -13,6 +13,5 @@ class Repository extends Data
         public readonly string $url,
         public readonly ?string $description,
         public readonly ?string $homepage,
-    ) {
-    }
+    ) {}
 }

@@ -17,6 +17,5 @@ class StDiff extends Data
         public readonly ?string $diff,
         public readonly ?string $new_path,
         public readonly ?string $old_path,
-    ) {
-    }
+    ) {}
 }

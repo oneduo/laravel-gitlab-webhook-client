@@ -32,6 +32,5 @@ class Job extends Data
         public readonly ?Runner $runner,
         public readonly ArtifactsFile $artifacts_file,
         public readonly ?Environment $environment,
-    ) {
-    }
+    ) {}
 }

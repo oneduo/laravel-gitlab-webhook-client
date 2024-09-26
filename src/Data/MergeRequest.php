@@ -65,6 +65,5 @@ class MergeRequest extends Data
         public readonly ?Carbon $updated_at,
         #[WithCast(GitlabUTCDatetimeCast::class)]
         public readonly ?Carbon $last_edited_at,
-    ) {
-    }
+    ) {}
 }

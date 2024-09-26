@@ -16,8 +16,7 @@ class PipelineEvent implements WebhookEventContract
         public readonly string $uuid,
         public readonly array $headers,
         public readonly Pipeline $pipeline,
-    ) {
-    }
+    ) {}
 
     public static function build(string $uuid, array $payload, array $headers): self
     {

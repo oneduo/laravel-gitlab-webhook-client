@@ -16,8 +16,7 @@ class IssueEvent implements WebhookEventContract
         public readonly string $uuid,
         public readonly array $headers,
         public readonly Issue $issue,
-    ) {
-    }
+    ) {}
 
     public static function build(string $uuid, array $payload, array $headers): self
     {

@@ -35,6 +35,5 @@ class PipelineAttributes extends Data
         #[DataCollectionOf(CiVariable::class)]
         public readonly ?DataCollection $variables,
         public readonly ?string $url,
-    ) {
-    }
+    ) {}
 }

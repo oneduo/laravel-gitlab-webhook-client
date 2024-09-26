@@ -16,8 +16,7 @@ class PushEvent implements WebhookEventContract
         public readonly string $uuid,
         public readonly array $headers,
         public readonly Push $push,
-    ) {
-    }
+    ) {}
 
     public static function build(string $uuid, array $payload, array $headers): self
     {

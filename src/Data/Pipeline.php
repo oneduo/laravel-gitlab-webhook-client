@@ -18,6 +18,5 @@ class Pipeline extends Data
         public readonly ?Commit $commit,
         #[DataCollectionOf(Job::class)]
         public readonly ?DataCollection $jobs,
-    ) {
-    }
+    ) {}
 }

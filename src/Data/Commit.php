@@ -22,6 +22,5 @@ class Commit extends Data
         public ?array $removed,
         #[WithCast(DateTimeInterfaceCast::class)]
         public Carbon $timestamp,
-    ) {
-    }
+    ) {}
 }

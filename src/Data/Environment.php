@@ -12,6 +12,5 @@ class Environment extends Data
         public readonly string $name,
         public readonly string $action,
         public readonly string $deployment_tier,
-    ) {
-    }
+    ) {}
 }

@@ -27,6 +27,5 @@ class Snippet extends Data
         public readonly ?Carbon $updated_at,
         #[WithCast(GitlabUTCDatetimeCast::class)]
         public readonly ?Carbon $expires_at,
-    ) {
-    }
+    ) {}
 }

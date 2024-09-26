@@ -24,6 +24,5 @@ class Label extends Data
         public readonly Carbon $created_at,
         #[WithCast(GitlabUTCDatetimeCast::class)]
         public readonly ?Carbon $updated_at,
-    ) {
-    }
+    ) {}
 }

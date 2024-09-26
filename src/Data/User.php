@@ -14,6 +14,5 @@ class User extends Data
         public readonly ?string $username,
         public readonly ?string $email,
         public readonly ?string $avatar_url,
-    ) {
-    }
+    ) {}
 }

@@ -14,6 +14,5 @@ class MergeRequestChanges extends Data
         public readonly ?LabelUpdate $labels,
         public readonly ?TimeUpdate $last_edited_at,
         public readonly ?IdentifierUpdate $last_edited_by_id,
-    ) {
-    }
+    ) {}
 }

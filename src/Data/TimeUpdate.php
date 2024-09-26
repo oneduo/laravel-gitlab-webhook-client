@@ -16,6 +16,5 @@ class TimeUpdate extends Data
         public readonly ?Carbon $previous,
         #[WithCast(GitlabUTCDatetimeCast::class)]
         public readonly ?Carbon $current,
-    ) {
-    }
+    ) {}
 }

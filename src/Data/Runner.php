@@ -16,6 +16,5 @@ class Runner extends Data
         public readonly bool $is_shared,
         /** @var array<string> */
         public readonly ?array $tags,
-    ) {
-    }
+    ) {}
 }
