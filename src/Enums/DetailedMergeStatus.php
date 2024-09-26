@@ -31,6 +31,7 @@ enum DetailedMergeStatus: string
     case NOT_OPEN = 'not_open';
     case POLICIES_DENIED = 'policies_denied';
     case PREPARING = 'preparing';
+    case REQUESTED_CHANGES = 'requested_changes';
     case SECURITY_POLICIES_EVALUATING = 'security_policy_evaluation';
     case UNCHECKED = 'unchecked';
 }
