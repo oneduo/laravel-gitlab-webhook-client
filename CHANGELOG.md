@@ -2,6 +2,15 @@
 
 All notable changes to `laravel-gitlab-webhook-client` will be documented in this file.
 
+## v0.1.13 - 2024-09-26
+
+### What's Changed
+
+* build(deps): bump dependabot/fetch-metadata from 2.1.0 to 2.2.0 by @dependabot in https://github.com/oneduo/laravel-gitlab-webhook-client/pull/19
+* Add missing enum values for detailed Merge Request status by @Wirone in https://github.com/oneduo/laravel-gitlab-webhook-client/pull/20
+
+**Full Changelog**: https://github.com/oneduo/laravel-gitlab-webhook-client/compare/v0.1.12...v0.1.13
+
 ## v0.1.12 - 2024-05-12
 
 ### What's Changed
