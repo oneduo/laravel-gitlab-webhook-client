@@ -2,6 +2,14 @@
 
 All notable changes to `laravel-gitlab-webhook-client` will be documented in this file.
 
+## v0.1.14 - 2024-10-22
+
+### What's Changed
+
+* Deployment tier can be null by @Wirone in https://github.com/oneduo/laravel-gitlab-webhook-client/pull/21
+
+**Full Changelog**: https://github.com/oneduo/laravel-gitlab-webhook-client/compare/v0.1.13...v0.1.14
+
 ## v0.1.13 - 2024-09-26
 
 ### What's Changed
