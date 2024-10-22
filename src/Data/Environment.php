@@ -11,6 +11,6 @@ class Environment extends Data
     public function __construct(
         public readonly string $name,
         public readonly string $action,
-        public readonly string $deployment_tier,
+        public readonly ?string $deployment_tier,
     ) {}
 }
