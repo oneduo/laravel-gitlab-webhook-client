@@ -2,6 +2,14 @@
 
 All notable changes to `laravel-gitlab-webhook-client` will be documented in this file.
 
+## v0.1.15 - 2025-01-08
+
+### What's Changed
+
+* feat: laravel 11 compatibility by @Rezrazi in https://github.com/oneduo/laravel-gitlab-webhook-client/pull/23
+
+**Full Changelog**: https://github.com/oneduo/laravel-gitlab-webhook-client/compare/v0.1.14...v0.1.15
+
 ## v0.1.14 - 2024-10-22
 
 ### What's Changed
