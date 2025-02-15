@@ -13,7 +13,7 @@ class Job extends Data
 {
     public function __construct(
         public readonly int $id,
-        public readonly string $stage,
+        public readonly ?string $stage,
         public readonly string $name,
         public readonly string $status,
         #[WithCast(GitlabUTCDatetimeCast::class)]
