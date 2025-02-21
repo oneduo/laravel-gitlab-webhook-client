@@ -26,6 +26,7 @@ enum DetailedMergeStatus: string
     case LOCKED_LFS_FILES = 'locked_lfs_files';
     case MERGEABLE = 'mergeable';
     case MERGE_REQUEST_BLOCKED = 'merge_request_blocked';
+    case MERGE_TIME = 'merge_time';
     case NEED_REBASE = 'need_rebase';
     case NOT_APPROVED = 'not_approved';
     case NOT_OPEN = 'not_open';
