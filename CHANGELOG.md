@@ -2,6 +2,17 @@
 
 All notable changes to `laravel-gitlab-webhook-client` will be documented in this file.
 
+## v0.1.16 - 2025-04-11
+
+### What's Changed
+
+* build(deps): bump dependabot/fetch-metadata from 2.2.0 to 2.3.0 by @dependabot in https://github.com/oneduo/laravel-gitlab-webhook-client/pull/24
+* build(deps): bump aglipanci/laravel-pint-action from 2.4 to 2.5 by @dependabot in https://github.com/oneduo/laravel-gitlab-webhook-client/pull/25
+* fix: Job stage can be null by @Wirone in https://github.com/oneduo/laravel-gitlab-webhook-client/pull/26
+* Add missing `merge_time` detailed merge status by @Wirone in https://github.com/oneduo/laravel-gitlab-webhook-client/pull/28
+
+**Full Changelog**: https://github.com/oneduo/laravel-gitlab-webhook-client/compare/v0.1.15...v0.1.16
+
 ## v0.1.15 - 2025-01-08
 
 ### What's Changed
